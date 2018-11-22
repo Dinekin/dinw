@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  -
+    function getAge(birthday) {
+      var ageDif = Date.now() - birthday.getTime();
+      var ageDate = new Date(ageDif);
+      return Math.abs(ageDate.getUTCFullYear() - 1970);
+    }
+    
+  div.card
+    h2 Hello!
+    p My name is Damian, and I'm an #{getAge(new Date(1998, 03, 11))} years old!
+      | I'm polish, and currently living in Poland, but in future I will try to move out of Europe 
+      | maybe to Asia, but life is very unpredictable. I like spend my free time on writing code.
+      | It's very reassuring for me and allows to create things what I'll come up with.
+      | Also I like to play games, mainly on PC but I touch PS4 for exclusives like RDR2 or Yakuza.
+      | If you have question or want to talk, feel free to send a message when I'm online on osu! or add on Twitch.
+      | I like get to know new people. :)
